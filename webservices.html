@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prayash | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body{
+        
+        text-align: center;
+        padding: 20px;
+        color: burlywood;
+    }
+  .more-me {
+  text-align: center;
+  padding: 74px 8%;
+  margin-top: -240px;
+  margin-bottom: -563px;
+}
+
+/* Card */
+.insta-card {
+  margin: auto;
+  margin-top: 30px;
+  max-width: 400px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,0,0,0.3);
+
+  transition: 0.4s;
+}
+
+/* Hover glow */
+.insta-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px red;
+}
+
+/* Icon */
+.insta-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: radial-gradient(circle, red, #400000);
+  font-size: 22px;
+}
+
+/* Text */
+.insta-text h3 {
+  margin: 0;
+  color: red;
+}
+
+.insta-text p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .insta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .more-me {
+  text-align: center;
+  padding: 150px 8%;
+  margin-top: -240px;
+}
+}
+  .bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 90px;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  
+  overflow-x:hidden;
+}
+
+
+
+/* NAV */
+* {
+  box-sizing: border-box;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,0,0,0.2);
+  z-index: 1000;
+}
+
+.logo {
+  color: burlywood;
+}
+
+/* UL FIX */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+/* ACTIVE + HOVER EFFECT */
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: red;
+}
+
+/* underline animation (🔥 premium touch) */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+nav a {
+  
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a.active { color:red; }
+
+/* SECTIONS */
+section {
+  min-height:100vh;
+  padding:120px 8%;
+}
+
+
+/* HERO */
+.hero {
+  text-align:center;
+}
+
+.hero img {
+  width:240px; /* 🔥 BIGGER */
+  border-radius:50%;
+  border:3px solid red;
+  box-shadow:0 0 50px red;
+}
+
+.hero h1 span { color:red; }
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,0,0,0.3);
+  border-radius:20px; /* 🔥 smoother */
+  padding:20px;
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 25px red;
+}
+
+/* SKILLS */
+.skill {
+  padding:15px;
+  border:1px solid red;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+.skill:hover { background:red; }
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 15px;
+  border:1px solid red;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+}
+.btn:hover { background:red; }
+
+/* INPUTS */
+input, textarea {
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  background:#111;
+  border:1px solid rgba(255,0,0,0.3);
+  border-radius:10px;
+  color:white;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.7s;
+}
+.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:25px 10px;
+  border-top:1px solid rgba(255,0,0,0.2);
+}
+
+.footer-links a {
+  margin:0 10px;
+  color:white;
+  font-size:18px;
+}
+.footer-links a:hover { color:red; }
+img{
+    height: auto;
+    width: 900px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .home{
+    display: none;
+  }
+    nav {
+    flex-direction:column;
+    gap:10px;
+    padding-bottom: 0px;
+    position: relative;
+  }
+  img{
+    height: auto;
+    width: 370px;
+    margin-left: -10px;
+    margin-top: 40px;
+  }
+
+
+  nav div {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero img {
+    width:180px;
+  }
+
+  section {
+    padding:100px 6%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <nav>
+  <h2 class="logo">PRAYASH DAS<br><span style="font-size: 10px; color: white; font-style: normal;">developer | content creator | designer | CS student</span></h2>
+  
+
+  <ul class="nav-links">
+    <li><a href="index.html" class="home">Home</a></li>
+    <li><a href="https://www.instagram.com/swiftsiteforyou/?hl=en">DM @swiftsiteforyou</a></li>
+    <li><a href="https://wa.me/919330277325?text=Hi%20I%20came%20from%20your%20portfolio">Whatsapp</a></li>
+    
+  </ul>
+</nav>
+    
+    <img src="Screenshot 2026-03-20 at 1.58.06 PM.png" alt="description">
+</body>
+</html>

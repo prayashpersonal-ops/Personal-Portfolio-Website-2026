@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prayash | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  .more-me {
+  text-align: center;
+  padding: 74px 8%;
+  margin-top: -240px;
+  margin-bottom: -563px;
+}
+
+/* Card */
+.insta-card {
+  margin: auto;
+  margin-top: 30px;
+  max-width: 400px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,0,0,0.3);
+
+  transition: 0.4s;
+}
+
+/* Hover glow */
+.insta-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 30px red;
+}
+
+/* Icon */
+.insta-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: radial-gradient(circle, red, #400000);
+  font-size: 22px;
+}
+
+/* Text */
+.insta-text h3 {
+  margin: 0;
+  color: red;
+}
+
+.insta-text p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Mobile */
+@media(max-width:600px){
+  .insta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .more-me {
+  text-align: center;
+  padding: 150px 8%;
+  margin-top: -240px;
+}
+}
+  .bg-glow {
+  position: fixed;
+  width: 600px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 90px;
+}
+html { scroll-behavior: smooth; }
+
+body {
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color:white;
+  overflow-x:hidden;
+}
+
+
+
+/* NAV */
+* {
+  box-sizing: border-box;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,0,0,0.2);
+  z-index: 1000;
+}
+
+.logo {
+  color: burlywood;
+}
+
+/* UL FIX */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  position: relative;
+}
+
+/* ACTIVE + HOVER EFFECT */
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: red;
+}
+
+/* underline animation (🔥 premium touch) */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+nav a {
+  
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a.active { color:red; }
+
+/* SECTIONS */
+section {
+  min-height:100vh;
+  padding:120px 8%;
+}
+
+
+/* HERO */
+.hero {
+  text-align:center;
+}
+
+.hero img {
+  width:240px; /* 🔥 BIGGER */
+  border-radius:50%;
+  border:3px solid red;
+  box-shadow:0 0 50px red;
+}
+#about img{
+  width:200px; /* 🔥 BIGGER */
+  border-radius:50%;
+  border:3px solid red;
+  box-shadow:0 0 50px red;
+}
+
+.hero h1 span { color:red; }
+
+/* GRID */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card {
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,0,0,0.3);
+  border-radius:20px; /* 🔥 smoother */
+  padding:20px;
+  transition:0.4s;
+}
+
+.card:hover {
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 25px red;
+}
+
+/* SKILLS */
+.skill {
+  padding:15px;
+  border:1px solid red;
+  border-radius:12px;
+  text-align:center;
+  transition:0.3s;
+}
+.skill:hover { background:red; }
+
+/* BUTTON */
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 15px;
+  border:1px solid red;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+}
+.btn:hover { background:red; }
+
+/* INPUTS */
+input, textarea {
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  background:#111;
+  border:1px solid rgba(255,0,0,0.3);
+  border-radius:10px;
+  color:white;
+}
+
+/* SCROLL ANIMATION */
+.hidden {
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.7s;
+}
+.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:25px 10px;
+  border-top:1px solid rgba(255,0,0,0.2);
+}
+
+.footer-links a {
+  margin:0 10px;
+  color:white;
+  font-size:18px;
+}
+.footer-links a:hover { color:red; }
+#contact a {
+  margin:0 10px;
+  color:white;
+  font-size:18px;
+}
+#contact a:hover { color:red; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav {
+    flex-direction:column;
+    gap:10px;
+    padding-bottom: 0px;
+    position: relative;
+  }
+  nav li{
+    display: none;
+  }
+
+  nav div {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero img {
+    width:180px;
+  }
+
+  section {
+    padding:100px 6%;
+  }
+
+  #contact{
+    margin-bottom: -500px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<nav>
+  <h2 class="logo">PRAYASH DAS<br><span style="font-size: 10px; color: white; font-style: normal;">developer | content creator | designer | CS student</span></h2>
+  
+
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">What I Offer</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <img src="IMG_5084.jpg">
+  <h1 class="hidden">Hi, I'm <span>Prayash</span></h1>
+  <p class="hidden">Building whatever comes to mind.</p>
+  <p style="margin-top: 100px; color: burlywood;">Exploring the world of <span style="color: rgb(255, 255, 255);">development</span> and <span style="color: rgb(255, 255, 255);">creative design</span> while building meaningful projects <br><br><span style="color: burlywood;">Actively seeking internship opportunities</span><br><br><br>
+</p>
+
+<p>First year CS student trying to learn something new every single day</p>
+</section>
+<section class="more-me">
+ 
+
+  <a href="https://www.instagram.com/yashgotalifee/?hl=en" target="_blank" class="insta-card">
+    <div class="insta-icon">
+      <i class="fab fa-instagram"></i>
+    </div>
+
+    <div class="insta-text">
+      <h3>@yashgotalifee</h3>
+      <p style="color: burlywood;">find out more about me here</p>
+    </div>
+  </a>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h1 style="color:burlywood;">My Projects</h1>
+  <div class="grid">
+    <div class="card hidden">
+      <h3>Portfolio</h3>
+      <p>Modern animated portfolio</p>
+      <a href="#" class="btn">Live</a>
+      <a href="#" class="btn">GitHub</a>
+      
+    </div>
+    
+    <div class="card hidden">
+      <h3>College App</h3>
+      <p>All-in-one student platform, <span style="color: burlywood;" >VITone</p>
+        <a href="#" class="btn">Live</a>
+        <a href="#" class="btn">GitHub</a>
+        
+      </div>
+      
+      <div class="card hidden">
+        <h3>AI Particle Tracker</h3>
+        <p>Built using AI. Random Project.</p>
+        <a href="https://aiparticle.vercel.app/" class="btn">Live</a>
+        <a href="https://github.com/prayashpersonal-ops/Prayash-AI-particle-system" class="btn">GitHub</a>
+        
+    </div>
+  </div>
+</section>
+<section id="services">
+  <h1 style="color:burlywood;">What I Offer</h1>
+  <div class="grid">
+    <div class="card hidden">
+      <h3>Web Services</h3>
+      <p>Clean UI, stunning looks. Perfect for your business.</p>
+      <a href="webservices.html" class="btn">EXPLORE</a>
+      
+    </div>
+
+    <div class="card hidden">
+      <h3>Brand Promotion</h3>
+      <p>Get more people to know about you.</p>
+        <a href="brandpromotion.html" class="btn">EXPLORE</a>
+      
+    </div>
+    
+    <div class="card hidden">
+      <h3>Video Editing</h3>
+      <p>Whether it's YT or Instagram, you will need an editor.</p>
+        <a href="#" class="btn">EXPLORE</a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h1 style="color:burlywood;">Skills</h1>
+  <div class="grid">
+    <div class="skill hidden">HTML</div>
+    <div class="skill hidden">CSS</div>
+    <div class="skill hidden">JavaScript</div>
+    <div class="skill hidden">React</div>
+    <div class="skill hidden">MongoDB</div>
+    <div class="skill hidden">JAVA</div>
+    <div class="skill hidden">Python</div>
+    <div class="skill hidden">Designing</div>
+    <div class="skill hidden">Video Editing</div>
+    <div class="skill hidden">Content Creation</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h1 style="color:burlywood;">Who Am I?</h1>
+  <img src="IMG_5084.jpg">
+  <p class="hidden" style="color: burlywood;">A first year CS student, building web-apps and more from my dorm room. Currently exploring <span style="color: rgb(255, 0, 0);">backend programming using JAVA.</span> I have a keen interest in <span style="color: rgb(255, 0, 0);">content creation </span>as well as<span style="color: rgb(255, 0, 0);"> video editing.</span> </p>
+  <br><br><br>
+  <p style="color: burlywood;"><span style="color: rgb(255, 0, 0);">MUSIC</span> is a constant interest—guitar and piano are the usual ways of expressing it.
+Outside of tech and building, <span style="color: rgb(255, 0, 0);">BADMINTON </span> helps balance focus with movement.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h1 style="color:burlywood;">Contact Me</h1>
+  <p>📩prayashpersonal@gmail.com</p>
+  <p>📞+91 9330277325</p>
+  <a href="https://www.instagram.com/yashgotalifee/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/prayashpersonal-ops" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/prayash-das-31b565374/" target="_blank"><i class="fab fa-linkedin"></i></a>
+</section>
+
+<footer>
+  <p>© 2026 Prayash</p>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/yashgotalifee/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/prayashpersonal-ops" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/prayash-das-31b565374/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</footer>
+
+<script>
+
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+document.querySelectorAll(".hidden").forEach(el => observer.observe(el));
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    if(pageYOffset >= sec.offsetTop - 150){
+      current = sec.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if(a.getAttribute("href") === "#" + current){
+      a.classList.add("active");
+    }
+  });
+});
+</script>
+<div class="bg-glow"></div>
+</body>
+</html>
