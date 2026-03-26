@@ -320,6 +320,111 @@ footer {
     margin-bottom: -131px;
   }
 }
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  padding: 10px;
+}
+
+.inner {
+  --w: clamp(110px, 28vw, 150px); /* slightly bigger for text */
+  --h: calc(var(--w) * 1.25);
+  --translateZ: clamp(140px, 30vw, 280px); /* reduced so it stays inside screen */
+  --rotateX: -12deg;
+
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+
+  transform-style: preserve-3d;
+  animation: rotating 20s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotateX(var(--rotateX)) rotateY(0);
+  }
+  to {
+    transform: rotateX(var(--rotateX)) rotateY(360deg);
+  }
+}
+
+.skill-card {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 0, 0, 0.6);
+
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 0, 0, 0.2);
+
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(var(--translateZ));
+
+  transition: all 0.3s ease;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #ff4d4d;
+  text-align: center;
+
+  font-size: clamp(11px, 3vw, 15px);
+  padding: 10px;
+
+  /* 🔥 FIX: prevent overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.skill-card:hover {
+  transform: rotateY(calc((360deg / var(--quantity)) * var(--index)))
+    translateZ(calc(var(--translateZ) + 30px)) scale(1.05);
+
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.9),
+    0 0 40px rgba(255, 0, 0, 0.7),
+    0 0 80px rgba(255, 0, 0, 0.5),
+    inset 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* 📱 MOBILE FIXES */
+@media (max-width: 600px) {
+  .inner {
+    --w: 120px;
+    --translateZ: 160px; /* tighter ring */
+    --rotateX: -8deg;
+    animation-duration: 25s;
+  }
+}
+
+/* Pause on hover (desktop only) */
+@media (hover: hover) {
+  .inner:hover {
+    animation-play-state: paused;
+  }
+}
 
 </style>
 </head>
@@ -383,16 +488,16 @@ footer {
     <div class="card hidden">
       <h3>College App</h3>
       <p>All-in-one student platform, <span style="color: burlywood;" >VITone</p>
-        <a href="https://vitone.netlify.app/" class="btn">Live</a>
+        <a href="https://vitonemessmenu.vercel.app/" class="btn">Live</a>
         <a href="https://github.com/prayashpersonal-ops/VITone" class="btn">GitHub</a>
         
       </div>
       
       <div class="card hidden">
-        <h3>AI Particle Tracker</h3>
-        <p>Built using AI. Random Project.</p>
-        <a href="https://aiparticle.vercel.app/" class="btn">Live</a>
-        <a href="https://github.com/prayashpersonal-ops/Prayash-AI-particle-system" class="btn">GitHub</a>
+        <h3>AI Property Price Predictor</h3>
+        <p>Cleared my basic ML and Flask concepts</p>
+        <a href="https://ai-property-price-predictor.onrender.com/" class="btn">Live</a>
+        <a href="https://github.com/prayashpersonal-ops/AI-property-price-predictor" class="btn">GitHub</a>
         
     </div>
   </div>
@@ -417,7 +522,7 @@ footer {
     <div class="card hidden">
       <h3>Video Editing</h3>
       <p>Whether it's YT or Instagram, you will need an editor.</p>
-        <a href="#" class="btn">EXPLORE</a>
+        <a href="videoediting.html" class="btn">EXPLORE</a>
       
     </div>
   </div>
@@ -425,20 +530,26 @@ footer {
 
 <!-- SKILLS -->
 <section id="skills">
-  <h1 style="color:burlywood;">Skills</h1>
-  <div class="grid">
-    <div class="skill hidden">HTML</div>
-    <div class="skill hidden">CSS</div>
-    <div class="skill hidden">JavaScript</div>
-    <div class="skill hidden">React</div>
-    <div class="skill hidden">MongoDB</div>
-    <div class="skill hidden">JAVA</div>
-    <div class="skill hidden">Python</div>
-    <div class="skill hidden">Designing</div>
-    <div class="skill hidden">Video Editing</div>
-    <div class="skill hidden">Content Creation</div>
+  <h1 style="color:burlywood;">My Skills</h1>
+
+  <div class="wrapper">
+    <div class="inner" style="--quantity: 10;">
+      
+      <div class="skill-card" style="--index: 0;"><div class="img">MongoDB</div></div>
+      <div class="skill-card" style="--index: 1;"><div class="img">FLASK</div></div>
+      <div class="skill-card" style="--index: 2;"><div class="img">PYTHON</div></div>
+      <div class="skill-card" style="--index: 3;"><div class="img">VIDEO EDITING</div></div>
+      <div class="skill-card" style="--index: 4;"><div class="img">HTML</div></div>
+      <div class="skill-card" style="--index: 5;"><div class="img">CSS</div></div>
+      <div class="skill-card" style="--index: 6;"><div class="img">JAVASCRIPT</div></div>
+      <div class="skill-card" style="--index: 7;"><div class="img">SQLite</div></div>
+      <div class="skill-card" style="--index: 8;"><div class="img">JAVA</div></div>
+      <div class="skill-card" style="--index: 9;"><div class="img">REACT</div></div>
+
+    </div>
   </div>
 </section>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
