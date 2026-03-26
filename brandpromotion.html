@@ -4,115 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Prayash | Portfolio</title>
+<title>Brand Promotion | Prayash</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-    body{
-        
-        text-align: center;
-        padding: 20px;
-        color: burlywood;
-    }
-  .more-me {
-  text-align: center;
-  padding: 74px 8%;
-  margin-top: -240px;
-  margin-bottom: -563px;
-}
-
-/* Card */
-.insta-card {
-  margin: auto;
-  margin-top: 30px;
-  max-width: 400px;
-
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  padding: 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  color: white;
-
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,0,0,0.3);
-
-  transition: 0.4s;
-}
-
-/* Hover glow */
-.insta-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 30px red;
-}
-
-/* Icon */
-.insta-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 12px;
-  background: radial-gradient(circle, red, #400000);
-  font-size: 22px;
-}
-
-/* Text */
-.insta-text h3 {
-  margin: 0;
-  color: red;
-}
-
-.insta-text p {
-  margin: 5px 0 0;
-  font-size: 13px;
-  opacity: 0.8;
-}
-
-/* Mobile */
-@media(max-width:600px){
-  .insta-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  .more-me {
-  text-align: center;
-  padding: 150px 8%;
-  margin-top: -240px;
-}
-}
-  .bg-glow {
-  position: fixed;
-  width: 600px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(255,0,0,0.15), transparent);
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  border-radius: 90px;
-}
-html { scroll-behavior: smooth; }
-
 body {
-  margin:0;
-  font-family:'Poppins', sans-serif;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top, #1a0000, #000);
-  
-  overflow-x:hidden;
-}
-
-
-
-/* NAV */
-* {
-  box-sizing: border-box;
+  color: white;
+  overflow-x: hidden;
 }
 
 /* NAV */
@@ -120,12 +23,10 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0px 40px;
-
+  padding: 10px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,0,0,0.2);
@@ -134,224 +35,162 @@ nav {
 
 .logo {
   color: burlywood;
+  font-size: 18px;
 }
 
-/* UL FIX */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
-  margin: 0;
-  padding: 0;
 }
 
-.nav-links li a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-size: 14px;
-  position: relative;
 }
 
-/* ACTIVE + HOVER EFFECT */
-.nav-links li a:hover,
-.nav-links li a.active {
+.nav-links a:hover {
   color: red;
 }
 
-/* underline animation (🔥 premium touch) */
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background: red;
-  transition: 0.3s;
+/* MAIN */
+.container {
+  padding: 140px 8% 80px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+/* HEADINGS */
+h1 {
+  font-size: 42px;
+  color: red;
+  text-shadow: 0 0 20px red;
 }
 
-nav a {
-  
-  color:white;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:14px;
+h2 {
+  margin-top: 40px;
+  color: burlywood;
 }
 
-nav a.active { color:red; }
-
-/* SECTIONS */
-section {
-  min-height:100vh;
-  padding:120px 8%;
-}
-
-
-/* HERO */
-.hero {
-  text-align:center;
-}
-
-.hero img {
-  width:240px; /* 🔥 BIGGER */
-  border-radius:50%;
-  border:3px solid red;
-  box-shadow:0 0 50px red;
-}
-
-.hero h1 span { color:red; }
-
-/* GRID */
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+p {
+  color: #ccc;
+  line-height: 1.6;
 }
 
 /* CARD */
-.card {
-  background:rgba(255,255,255,0.05);
-  border:1px solid rgba(255,0,0,0.3);
-  border-radius:20px; /* 🔥 smoother */
-  padding:20px;
-  transition:0.4s;
+.promo-card {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,0,0,0.3);
+
+  box-shadow:
+    0 0 10px rgba(255,0,0,0.3),
+    inset 0 0 10px rgba(255,0,0,0.2);
+
+  transition: 0.4s;
 }
 
-.card:hover {
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 0 25px red;
+.promo-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 0 20px red,
+    0 0 40px rgba(255,0,0,0.5);
 }
 
-/* SKILLS */
-.skill {
-  padding:15px;
-  border:1px solid red;
-  border-radius:12px;
-  text-align:center;
-  transition:0.3s;
-}
-.skill:hover { background:red; }
-
-/* BUTTON */
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  padding:8px 15px;
-  border:1px solid red;
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
-  font-size:14px;
-}
-.btn:hover { background:red; }
-
-/* INPUTS */
-input, textarea {
-  width:100%;
-  margin-top:10px;
-  padding:12px;
-  background:#111;
-  border:1px solid rgba(255,0,0,0.3);
-  border-radius:10px;
-  color:white;
+/* LINK */
+a {
+  color: red;
+  text-decoration: none;
 }
 
-/* SCROLL ANIMATION */
-.hidden {
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.7s;
-}
-.show {
-  opacity:1;
-  transform:translateY(0);
+a:hover {
+  text-shadow: 0 0 10px red;
 }
 
-/* FOOTER */
-footer {
-  text-align:center;
-  padding:25px 10px;
-  border-top:1px solid rgba(255,0,0,0.2);
+/* CTA */
+.cta {
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 1px solid rgba(255,0,0,0.2);
 }
 
-.footer-links a {
-  margin:0 10px;
-  color:white;
-  font-size:18px;
-}
-.footer-links a:hover { color:red; }
-img{
-    height: auto;
-    width: 900px;
+.cta p {
+  margin: 5px 0;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .home{
-    display: none;
-  }
-    nav {
-    flex-direction:column;
-    gap:10px;
-    padding-bottom: 0px;
-    position: relative;
-  }
-  img{
-    height: auto;
-    width: 370px;
-    margin-left: -10px;
-    margin-top: 40px;
-  }
-
-
-  nav div {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero img {
-    width:180px;
-  }
-
-  section {
-    padding:100px 6%;
-  }
-}
+/* MOBILE */
 @media(max-width:768px){
   nav {
-    display:none;
+    display: none;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .container {
+    padding: 100px 6%;
   }
 }
 </style>
 </head>
 
 <body>
-    <nav>
-  <h2 class="logo">PRAYASH DAS<br><span style="font-size: 10px; color: white; font-style: normal;">developer | content creator | designer | CS student</span></h2>
-  
+
+<nav>
+  <h2 class="logo">PRAYASH DAS</h2>
 
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="index.html#projects">Projects</a></li>
-    <li><a href="index.html#services">What I Offer</a></li>
+    <li><a href="index.html#services">Services</a></li>
     <li><a href="index.html#skills">Skills</a></li>
-    <li><a href="index.html#about">About Me</a></li>
+    <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
-</nav><br><br><br><br><br><br>
-    <h1 style="color: aliceblue;">BRAND PROMOTION</h1>
-    <h2>1. Through MY social media account(6M+ views)</h2>
-    <h3 style="color: wheat;">If your product/brand matches with my niche(tech+college+teens), I will post a collaborative reel about the product.</h3>
-    <br><br><br>
-    <h2>2. Through <a href="https://vitone.netlify.app/" style="color: red; text-decoration: none;">VITone</a></h2>
-    <h3 style="color: wheat;">I will put up a banner/small ads about your product/brand on the website(top).
-        Since the VITone is made for the campus students, it's best if your brand associates with young audience.
-    </h3>
-    
+</nav>
+
+<div class="container">
+
+  <h1>Brand Promotion</h1>
+  <p>Helping brands reach the right audience through content and digital platforms.</p>
+
+  <!-- SOCIAL MEDIA -->
+  <div class="promo-card">
+    <h2>1. Promotion via My Social Media</h2>
+    <p>
+      I create content for a growing audience with <strong>6M+ total views</strong>, primarily focused on 
+      tech, college life, and relatable youth content.
+    </p>
+    <p>
+      If your product aligns with this audience, I will create a <strong>collaborative reel</strong> that feels natural, engaging, and not forced — ensuring better reach and trust.
+    </p>
+  </div>
+
+  <!-- VITONE -->
+  <div class="promo-card">
+    <h2>2. Promotion via <a href="https://vitone.netlify.app/" target="_blank">VITone</a></h2>
+    <p>
+      Your brand can be featured directly on <strong>VITone</strong> through banners or highlighted placements.
+    </p>
+    <p>
+      Since the platform is built specifically for <strong>college students</strong>, it is highly effective for brands targeting a young, active, and digital-first audience.
+    </p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <p>Interested in working together?</p>
+    <p><strong>📞 +91 9330277325</strong></p>
+    <p>📩 prayashpersonal@gmail.com</p>
+  </div>
+
+</div>
+
 </body>
 </html>
