@@ -1,158 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      /* FOOTER */
-footer {
-  text-align:center;
-  padding:25px 10px;
-  border-top:1px solid rgba(255,0,0,0.2);
-  color: aliceblue;
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayash Builds</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: white;
 }
 
-.footer-links a {
-  margin:0 10px;
-  color:white;
-  font-size:18px;
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
-.footer-links a:hover { color:red; }
-      body{
-        background-color: black;
-      }
-      nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        padding: 0px 40px;
-        
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        background: rgba(0,0,0,0.6);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255,0,0,0.2);
-        z-index: 1000;
-      }
-      
-      .logo {
-        color: burlywood;
-      }
-      
-      /* UL FIX */
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 25px;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .nav-links li a {
-        color: white;
-        text-decoration: none;
-        font-size: 14px;
-        position: relative;
-      }
-      
-      /* ACTIVE + HOVER EFFECT */
-      .nav-links li a:hover,
-      .nav-links li a.active {
-        color: red;
-      }
-      
-      /* underline animation (🔥 premium touch) */
-      .nav-links li a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 0%;
-        height: 2px;
-        background: red;
-        transition: 0.3s;
-      }
-      
-      .nav-links li a:hover::after {
-        width: 100%;
-      }
-      
-      nav a {
-        
-        color:white;
-        margin-left:20px;
-        text-decoration:none;
-        font-size:14px;
-      }
-      
-      nav a.active { color:red; }
-      
-      /* SECTIONS */
-      section {
-        min-height:100vh;
-        padding:120px 8%;
-      }
-      img{
 
-        height: auto;
-        width:100%;
-      }
-@media(max-width:768px){
-  nav {
-    flex-direction:column;
-    gap:10px;
-    padding-bottom: 0px;
-    position: relative;
-  }
-  nav li{
-    display: none;
-  }
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-  nav div {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+.header h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: red;
+  text-shadow: 0 0 20px red;
+}
+
+.header p {
+  letter-spacing: 3px;
+  color: #ccc;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,0,0,0.4);
+  border-radius: 20px;
+  padding: 25px;
+
+  box-shadow:
+    0 0 10px rgba(255,0,0,0.4),
+    inset 0 0 10px rgba(255,0,0,0.2);
+
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 0 20px red,
+    0 0 40px rgba(255,0,0,0.6);
+}
+
+/* TITLES */
+.card h2 {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* LIST */
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ADDONS */
+.addons p {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,0,0,0.2);
+  padding: 6px 0;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #aaa;
+}
+
+.footer span {
+  color: red;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .header h1 {
+    font-size: 36px;
   }
 }
-.img{
-  
-  height: auto;
-  width: 100%;
-
-}
-  </style>
+</style>
 </head>
+
 <body>
-  <nav>
-  <h2 class="logo">PRAYASH DAS<br><span style="font-size: 10px; color: white; font-style: normal;">developer | content creator | designer | CS student</span></h2>
-  
 
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="index.html#projects">Projects</a></li>
-    <li><a href="index.html#services">What I Offer</a></li>
-    <li><a href="index.html#skills">Skills</a></li>
-    <li><a href="index.html#about">About Me</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
-</nav>
-<section class="img">
-  <img src="bd2fd280-fbd3-489a-bfa0-cc3599a84b6d.JPG" alt="swiftsite">
-</section>
-<section class="contacts">
-    
+<div class="container">
 
-  </section>
-  <footer>
-  <p>© 2026 Prayash</p>
-  <div class="footer-links">
-    <a href="https://www.instagram.com/yashgotalifee/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://github.com/prayashpersonal-ops" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/prayash-das-31b565374/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>PRAYASH BUILDS</h1>
+    <p>WEB SERVICES FOR YOU</p>
   </div>
-</footer>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <!-- BASIC -->
+    <div class="card">
+      <h2>BASIC</h2>
+      <div class="price">₹1399</div>
+      <ul>
+        <li>1-page website (responsive)</li>
+        <li>Business info (About, Services)</li>
+        <li>WhatsApp chat button</li>
+        <li>Contact details</li>
+        <li>Google Maps location</li>
+        <li>Delivery: 2–3 days</li>
+      </ul>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="card">
+      <h2>STANDARD</h2>
+      <div class="price">₹3999</div>
+      <ul>
+        <li>Everything in Basic package</li>
+        <li>3 pages (Home, Services, Contact)</li>
+        <li>Better design & layout</li>
+        <li>Speed optimization</li>
+        <li>Delivery: 5–6 days</li>
+      </ul>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="card">
+      <h2>PREMIUM</h2>
+      <div class="price">₹8999</div>
+      <ul>
+        <li>Everything in Standard package</li>
+        <li>7 pages + custom pages</li>
+        <li>Cool animations</li>
+        <li>Basic SEO (Google-friendly)</li>
+        <li>Hosting included</li>
+        <li>Delivery: 10 days</li>
+      </ul>
+    </div>
+
+    <!-- ADD-ONS -->
+    <div class="card addons">
+      <h2>ADD-ONS</h2>
+      <p><span>₹449</span> <span>Extra Page</span></p>
+      <p><span>₹449/wk</span> <span>Maintenance</span></p>
+      <p><span>₹449</span> <span>Extra revisions</span></p>
+      <p><span>₹449</span> <span>1-on-1 call</span></p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>For more details and inquiries</p>
+    <p>📞 <span>+91 9330277325</span></p>
+  </div>
+
+</div>
+
 </body>
 </html>
